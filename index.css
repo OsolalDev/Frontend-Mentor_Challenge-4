@@ -1,0 +1,142 @@
+/* GENERAL */
+:root {
+  /* PRIMARY */
+  --brightOrange: hsl(31, 77%, 52%);
+  --darkCyan: hsl(184, 100%, 22%);
+  --veryDarkCyan: hsl(179, 100%, 13%);
+
+  /* NEUTRAL */
+  /* paragraphs */
+  --transparentWhite: hsla(0, 0%, 100%, 0.75);
+  /* bg, heading, buttons */
+  --veryLightGray: hsl(0, 0%, 95%);
+}
+
+body {
+  font-size: 15px;
+}
+
+h1,
+p {
+  margin: 0;
+}
+
+h1 {
+  font-family: "Big Shoulders Display", cursive;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  margin: 2rem 0;
+}
+
+p {
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: normal;
+  color: var(--transparentWhite);
+}
+
+.challenge {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* CARDS */
+.container {
+  display: flex;
+  width: 900px;
+  color: white;
+}
+
+.content-card {
+  padding: 3rem;
+}
+
+.content-card-text {
+  line-height: 1.5rem;
+}
+
+.content-card-button {
+  background-color: var(--veryLightGray);
+  border: none;
+  width: 70%;
+  height: 3rem;
+  border-radius: 40px;
+  font-weight: bold;
+  margin-top: 5rem;
+}
+
+.content-card-button:hover {
+  border: 2px solid white;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+}
+
+/* CARD BACKROUNDS AN BUTTON TEXT COLOR */
+
+.orange {
+  background-color: var(--brightOrange);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.orange-btn {
+  color: var(--brightOrange);
+}
+
+.blue {
+  background-color: var(--darkCyan);
+}
+
+.blue-btn {
+  color: var(--darkCyan);
+}
+
+.green {
+  background-color: var(--veryDarkCyan);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.green-btn {
+  color: var(--veryDarkCyan);
+}
+
+/* FOOTER */
+
+.attribution {
+  text-align: center;
+}
+.attribution a {
+  color: var(--brightOrange);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 950px) {
+  .challenge {
+    height: auto;
+    margin-bottom: 2rem;
+  }
+
+  .container {
+    flex-direction: column;
+    width: 330px;
+  }
+
+  .orange {
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0px;
+  }
+
+  .green {
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 10px;
+  }
+
+  .content-card-button {
+    width: 60%;
+    margin-top: 2rem;
+  }
+}
